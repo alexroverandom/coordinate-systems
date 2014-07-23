@@ -1,0 +1,812 @@
+object FormCoordSys: TFormCoordSys
+  Left = 0
+  Top = 0
+  Caption = #1057#1080#1089#1090#1077#1084#1099' '#1082#1086#1086#1088#1076#1080#1085#1072#1090
+  ClientHeight = 750
+  ClientWidth = 1200
+  Position = poScreenCenter
+  Visible = False
+  OnCreate = FormCreate
+  StyleLookup = 'backgroundstyle'
+  object pnlData: TPanel
+    Align = alMostLeft
+    Width = 233.000000000000000000
+    Height = 750.000000000000000000
+    TabOrder = 0
+    object grbInputData: TGroupBox
+      Align = alMostTop
+      Width = 233.000000000000000000
+      Height = 137.000000000000000000
+      TabOrder = 0
+      Text = #1043#1077#1086#1075#1088#1072#1092#1080#1095#1077#1089#1082#1080#1077' '#1082#1086#1086#1088#1076#1080#1085#1072#1090#1099
+      object edtLatitudeDeg: TEdit
+        Position.Point = '(72,32)'
+        Width = 41.000000000000000000
+        Height = 22.000000000000000000
+        OnKeyUp = edtLatitudeDegKeyUp
+        TabOrder = 0
+        KeyboardType = vktDefault
+        OnChange = edtLatitudeDegChange
+        Password = False
+        Text = '0'
+      end
+      object edtLongitudeDeg: TEdit
+        Position.Point = '(72,64)'
+        Width = 41.000000000000000000
+        Height = 22.000000000000000000
+        OnKeyUp = edtLatitudeDegKeyUp
+        TabOrder = 1
+        KeyboardType = vktDefault
+        OnChange = edtLongitudeDegChange
+        Password = False
+        Text = '0'
+      end
+      object edtH: TEdit
+        Position.Point = '(72,96)'
+        Width = 139.000000000000000000
+        Height = 22.000000000000000000
+        OnKeyUp = edtLatitudeDegKeyUp
+        TabOrder = 2
+        KeyboardType = vktDefault
+        OnChange = edtHChange
+        Password = False
+        Text = '0'
+      end
+      object lblLatitude: TLabel
+        Position.Point = '(8,32)'
+        Width = 49.000000000000000000
+        Height = 25.000000000000000000
+        TabOrder = 3
+        Text = #1064#1080#1088#1086#1090#1072
+      end
+      object lblLongitude: TLabel
+        Position.Point = '(8,64)'
+        Width = 49.000000000000000000
+        Height = 25.000000000000000000
+        TabOrder = 4
+        Text = #1044#1086#1083#1075#1086#1090#1072
+      end
+      object lblH: TLabel
+        Position.Point = '(8,96)'
+        Width = 65.000000000000000000
+        Height = 25.000000000000000000
+        TabOrder = 5
+        Text = #1042#1099#1089#1086#1090#1072' ('#1084')'
+      end
+      object edtLatitudeMin: TEdit
+        Position.Point = '(120,32)'
+        Width = 41.000000000000000000
+        Height = 22.000000000000000000
+        OnKeyUp = edtLatitudeDegKeyUp
+        TabOrder = 6
+        KeyboardType = vktDefault
+        OnChange = edtLatitudeDegChange
+        Password = False
+        Text = '0'
+      end
+      object edtLatitudeSec: TEdit
+        Position.Point = '(168,32)'
+        Width = 41.000000000000000000
+        Height = 22.000000000000000000
+        OnKeyUp = edtLatitudeDegKeyUp
+        TabOrder = 7
+        KeyboardType = vktDefault
+        OnChange = edtLatitudeDegChange
+        Password = False
+        Text = '0'
+      end
+      object edtLongitudeMin: TEdit
+        Position.Point = '(120,64)'
+        Width = 41.000000000000000000
+        Height = 22.000000000000000000
+        OnKeyUp = edtLatitudeDegKeyUp
+        TabOrder = 8
+        KeyboardType = vktDefault
+        OnChange = edtLongitudeDegChange
+        Password = False
+        Text = '0'
+      end
+      object edtLongitudeSec: TEdit
+        Position.Point = '(168,64)'
+        Width = 41.000000000000000000
+        Height = 22.000000000000000000
+        OnKeyUp = edtLatitudeDegKeyUp
+        TabOrder = 9
+        KeyboardType = vktDefault
+        OnChange = edtLongitudeDegChange
+        Password = False
+        Text = '0'
+      end
+      object lblLegend: TLabel
+        Position.Point = '(112,56)'
+        Width = 105.000000000000000000
+        Height = 15.000000000000000000
+        TabOrder = 10
+        Text = #176'            '#39'             "'
+      end
+      object lblInfo: TLabel
+        Position.Point = '(112,24)'
+        Width = 120.000000000000000000
+        Height = 15.000000000000000000
+        OnKeyUp = edtLatitudeDegKeyUp
+        TabOrder = 11
+        Text = #176'            '#39'             "'
+      end
+      object btnHelpGeo: TButton
+        Position.Point = '(208,9)'
+        Width = 25.000000000000000000
+        Height = 22.000000000000000000
+        OnClick = btnHelpGeoClick
+        TabOrder = 12
+        Text = '?'
+      end
+    end
+    object expGeocenter: TExpander
+      Align = alTop
+      Position.Point = '(0,137)'
+      Width = 233.000000000000000000
+      Height = 137.000000000000000000
+      TabOrder = 1
+      Text = #1043#1077#1086#1094#1077#1085#1090#1088#1080#1095#1077#1089#1082#1080#1077' '#1082#1086#1086#1088#1076#1080#1085#1072#1090#1099' ('#1084')'
+      ShowCheck = False
+      ContentSize = '112'
+      object edtXGeocenter: TEdit
+        Position.Point = '(46,8)'
+        Width = 155.000000000000000000
+        Height = 22.000000000000000000
+        TabOrder = 0
+        ReadOnly = True
+        KeyboardType = vktDefault
+        Password = False
+        Text = '0'
+      end
+      object edtYGeocenter: TEdit
+        Position.Point = '(46,40)'
+        Width = 155.000000000000000000
+        Height = 22.000000000000000000
+        TabOrder = 1
+        ReadOnly = True
+        KeyboardType = vktDefault
+        Password = False
+        Text = '0'
+      end
+      object edtZGeocenter: TEdit
+        Position.Point = '(46,72)'
+        Width = 155.000000000000000000
+        Height = 22.000000000000000000
+        TabOrder = 2
+        ReadOnly = True
+        KeyboardType = vktDefault
+        Password = False
+        Text = '0'
+      end
+      object lblX: TLabel
+        Position.Point = '(16,8)'
+        Width = 25.000000000000000000
+        Height = 25.000000000000000000
+        TabOrder = 3
+        Text = 'X = '
+      end
+      object lblY: TLabel
+        Position.Point = '(16,40)'
+        Width = 25.000000000000000000
+        Height = 25.000000000000000000
+        TabOrder = 4
+        Text = 'Y = '
+      end
+      object lblZ: TLabel
+        Position.Point = '(16,72)'
+        Width = 25.000000000000000000
+        Height = 25.000000000000000000
+        TabOrder = 5
+        Text = 'Z = '
+      end
+      object btnHelpGeocenter: TButton
+        Position.Point = '(208,-24)'
+        Width = 25.000000000000000000
+        Height = 22.000000000000000000
+        OnClick = btnHelpGeocenterClick
+        TabOrder = 6
+        Text = '?'
+      end
+    end
+    object expAzimut: TExpander
+      Align = alTop
+      Position.Point = '(0,489)'
+      Width = 233.000000000000000000
+      Height = 150.000000000000000000
+      TabOrder = 2
+      Text = #1040#1079#1080#1084#1091#1090#1072#1083#1100#1085#1072#1103' '#1088#1072#1074#1085#1086#1091#1075#1086#1083#1100#1085#1072#1103#13#10'('#1089#1090#1077#1088#1077#1086#1075#1088#1072#1092#1080#1095#1077#1089#1082#1072#1103') '#1087#1088#1086#1077#1082#1094#1080#1103' ('#1084')'
+      ShowCheck = False
+      ContentSize = '125'
+      object lblXAzimut: TLabel
+        Position.Point = '(16,64)'
+        Width = 25.000000000000000000
+        Height = 15.000000000000000000
+        TabOrder = 0
+        Text = 'X = '
+      end
+      object lblYAzimut: TLabel
+        Position.Point = '(16,88)'
+        Width = 25.000000000000000000
+        Height = 15.000000000000000000
+        TabOrder = 1
+        Text = 'Y = '
+      end
+      object edtXAzimut: TEdit
+        Position.Point = '(48,56)'
+        Width = 153.000000000000000000
+        Height = 22.000000000000000000
+        TabOrder = 2
+        ReadOnly = True
+        KeyboardType = vktDefault
+        Password = False
+        Text = '0'
+      end
+      object edtYAzimut: TEdit
+        Position.Point = '(48,88)'
+        Width = 153.000000000000000000
+        Height = 22.000000000000000000
+        TabOrder = 3
+        ReadOnly = True
+        KeyboardType = vktDefault
+        Password = False
+        Text = '0'
+      end
+      object lblLatBase: TLabel
+        Position.Point = '(8,8)'
+        Width = 65.000000000000000000
+        Height = 41.000000000000000000
+        TabOrder = 4
+        Text = #1064#1080#1088#1086#1090#1072#13#10#1089#1077#1095#1077#1085#1080#1103' ('#176')'
+      end
+      object trbCrossLatitude: TTrackBar
+        Cursor = crHandPoint
+        Position.Point = '(72,24)'
+        Width = 105.000000000000000000
+        Height = 15.000000000000000000
+        TabOrder = 5
+        Max = 90.000000000000000000
+        Orientation = orHorizontal
+        Value = 90.000000000000000000
+        OnChange = trbCrossLatitudeChange
+      end
+      object edtCrossLatitude: TEdit
+        Position.Point = '(184,20)'
+        Width = 41.000000000000000000
+        Height = 25.000000000000000000
+        TabOrder = 6
+        ReadOnly = True
+        KeyboardType = vktDefault
+        Password = False
+        Text = '90'
+      end
+      object btnHelpAzimut: TButton
+        Position.Point = '(208,-24)'
+        Width = 25.000000000000000000
+        Height = 22.000000000000000000
+        OnClick = btnHelpAzimutClick
+        TabOrder = 7
+        Text = '?'
+      end
+    end
+    object expMercator: TExpander
+      Align = alTop
+      Position.Point = '(0,274)'
+      Width = 233.000000000000000000
+      Height = 111.000000000000000000
+      TabOrder = 3
+      Text = #1062#1080#1083#1080#1085#1076#1088#1080#1095#1077#1089#1082#1072#1103' '#13#10#1087#1088#1086#1077#1082#1094#1080#1103' '#1052#1077#1088#1082#1072#1090#1086#1088#1072' ('#1084')'
+      ShowCheck = False
+      ContentSize = '86'
+      object lblXMercator: TLabel
+        Position.Point = '(16,24)'
+        Width = 25.000000000000000000
+        Height = 15.000000000000000000
+        TabOrder = 0
+        Text = #1061' = '
+      end
+      object lblYMercator: TLabel
+        Position.Point = '(16,56)'
+        Width = 25.000000000000000000
+        Height = 15.000000000000000000
+        TabOrder = 1
+        Text = 'Y = '
+      end
+      object edtXMercator: TEdit
+        Position.Point = '(48,16)'
+        Width = 153.000000000000000000
+        Height = 22.000000000000000000
+        TabOrder = 2
+        ReadOnly = True
+        KeyboardType = vktDefault
+        Password = False
+        Text = '0'
+      end
+      object edtYMercator: TEdit
+        Position.Point = '(48,48)'
+        Width = 153.000000000000000000
+        Height = 22.000000000000000000
+        TabOrder = 3
+        ReadOnly = True
+        KeyboardType = vktDefault
+        Password = False
+        Text = '0'
+      end
+      object btnHelpMercator: TButton
+        Position.Point = '(208,-24)'
+        Width = 25.000000000000000000
+        Height = 22.000000000000000000
+        OnClick = btnHelpMercatorClick
+        TabOrder = 4
+        Text = '?'
+      end
+    end
+    object expGauss: TExpander
+      Align = alTop
+      Position.Point = '(0,385)'
+      Width = 233.000000000000000000
+      Height = 104.000000000000000000
+      TabOrder = 4
+      Text = #1055#1088#1086#1077#1082#1094#1080#1103' '#1043#1072#1091#1089#1089#1072'-'#1050#1088#1102#1075#1077#1088#1072' ('#1084')'
+      ShowCheck = False
+      ContentSize = '79'
+      object edtXGauss: TEdit
+        Position.Point = '(48,8)'
+        Width = 153.000000000000000000
+        Height = 22.000000000000000000
+        TabOrder = 0
+        ReadOnly = True
+        KeyboardType = vktDefault
+        Password = False
+      end
+      object edtYGauss: TEdit
+        Position.Point = '(48,40)'
+        Width = 153.000000000000000000
+        Height = 22.000000000000000000
+        TabOrder = 1
+        ReadOnly = True
+        KeyboardType = vktDefault
+        Password = False
+      end
+      object lblXGauss: TLabel
+        Position.Point = '(16,16)'
+        Width = 25.000000000000000000
+        Height = 15.000000000000000000
+        TabOrder = 2
+        Text = 'X = '
+      end
+      object lblYGauss: TLabel
+        Position.Point = '(16,40)'
+        Width = 25.000000000000000000
+        Height = 15.000000000000000000
+        TabOrder = 3
+        Text = 'Y = '
+      end
+      object btnHelpGauss: TButton
+        Position.Point = '(208,-24)'
+        Width = 25.000000000000000000
+        Height = 22.000000000000000000
+        OnClick = btnHelpGaussClick
+        TabOrder = 4
+        Text = '?'
+      end
+    end
+  end
+  object pnlGraphics: TPanel
+    Align = alClient
+    Position.Point = '(233,0)'
+    Width = 967.000000000000000000
+    Height = 750.000000000000000000
+    OnResize = pnlGraphicsResize
+    TabOrder = 1
+    object pnlUP: TPanel
+      Align = alMostTop
+      Width = 967.000000000000000000
+      Height = 289.000000000000000000
+      TabOrder = 0
+      object pnlMercatorUL: TPanel
+        Align = alMostLeft
+        Width = 481.000000000000000000
+        Height = 289.000000000000000000
+        TabOrder = 0
+        object imgMercator: TImage
+          Align = alClient
+          Position.Point = '(0,65)'
+          Width = 481.000000000000000000
+          Height = 224.000000000000000000
+          OnResize = imgAzimutResize
+        end
+        object pnlMercatorParams: TPanel
+          Align = alTop
+          Width = 481.000000000000000000
+          Height = 65.000000000000000000
+          TabOrder = 1
+          object lblMercatoParams: TLabel
+            Position.Point = '(112,0)'
+            Width = 177.000000000000000000
+            Height = 25.000000000000000000
+            TabOrder = 0
+            Font.Size = 16.000000000000000000
+            Text = #1055#1088#1086#1077#1082#1094#1080#1103' '#1052#1077#1088#1082#1072#1090#1086#1088#1072
+          end
+          object chbAllMercator: TCheckBox
+            Position.Point = '(0,24)'
+            Width = 153.000000000000000000
+            Height = 19.000000000000000000
+            TabOrder = 1
+            IsChecked = True
+            Text = #1087#1086#1082#1072#1079#1072#1090#1100' '#1074#1089#1102' '#1087#1088#1086#1077#1082#1094#1080#1102
+            OnChange = chbAllMercatorChange
+          end
+          object cbLatMinMercator: TComboBox
+            Enabled = False
+            Position.Point = '(352,16)'
+            Width = 60.000000000000000000
+            Height = 22.000000000000000000
+            TabOrder = 2
+            ItemIndex = 5
+            OnChange = cbStepMercatorChange
+          end
+          object cbLatMaxMercator: TComboBox
+            Enabled = False
+            Position.Point = '(416,16)'
+            Width = 60.000000000000000000
+            Height = 22.000000000000000000
+            TabOrder = 3
+            ItemIndex = 8
+            OnChange = cbStepMercatorChange
+          end
+          object cbLongMinMercator: TComboBox
+            Enabled = False
+            Position.Point = '(352,40)'
+            Width = 60.000000000000000000
+            Height = 22.000000000000000000
+            TabOrder = 4
+            ItemIndex = 9
+            OnChange = cbStepMercatorChange
+          end
+          object cbLongMaxMercator: TComboBox
+            Enabled = False
+            Position.Point = '(416,40)'
+            Width = 60.000000000000000000
+            Height = 22.000000000000000000
+            TabOrder = 5
+            ItemIndex = 13
+            OnChange = chbAllMercatorChange
+          end
+          object lblMin: TLabel
+            Position.Point = '(384,0)'
+            Width = 25.000000000000000000
+            Height = 15.000000000000000000
+            TabOrder = 6
+            Text = 'min'
+          end
+          object lblMax: TLabel
+            Position.Point = '(432,0)'
+            Width = 33.000000000000000000
+            Height = 15.000000000000000000
+            TabOrder = 7
+            Text = 'max'
+          end
+          object lblMercLat: TLabel
+            Position.Point = '(304,24)'
+            Width = 49.000000000000000000
+            Height = 15.000000000000000000
+            TabOrder = 8
+            Text = #1064#1080#1088#1086#1090#1099
+          end
+          object lblMercLong: TLabel
+            Position.Point = '(304,40)'
+            Width = 57.000000000000000000
+            Height = 15.000000000000000000
+            TabOrder = 9
+            Text = #1044#1086#1083#1075#1086#1090#1099
+          end
+          object cbStepMercator: TComboBox
+            Position.Point = '(240,24)'
+            Width = 52.000000000000000000
+            Height = 22.000000000000000000
+            TabOrder = 10
+            ItemIndex = 1
+            OnChange = cbStepMercatorChange
+          end
+          object lblStepMercator: TLabel
+            Position.Point = '(168,28)'
+            Width = 81.000000000000000000
+            Height = 15.000000000000000000
+            TabOrder = 11
+            Text = #1064#1072#1075' '#1089#1077#1090#1082#1080' ('#176')'
+          end
+        end
+      end
+      object splVertUp: TSplitter
+        Align = alLeft
+        Cursor = crHSplit
+        Position.Point = '(481,0)'
+        Width = 5.000000000000000000
+        Height = 289.000000000000000000
+        TabOrder = 1
+        MinSize = 20.000000000000000000
+      end
+      object pnlAzimutUR: TPanel
+        Align = alClient
+        Position.Point = '(486,0)'
+        Width = 481.000000000000000000
+        Height = 289.000000000000000000
+        TabOrder = 2
+        object pnlAzimut: TPanel
+          Align = alTop
+          Width = 481.000000000000000000
+          Height = 65.000000000000000000
+          TabOrder = 0
+          object lblAzimutParams: TLabel
+            Position.Point = '(56,0)'
+            Width = 209.000000000000000000
+            Height = 25.000000000000000000
+            TabOrder = 0
+            Font.Size = 16.000000000000000000
+            Text = #1040#1079#1080#1084#1091#1090#1072#1083#1100#1085#1072#1103' '#1087#1088#1086#1077#1082#1094#1080#1103
+          end
+          object cbLatMaxAzimut: TComboBox
+            Enabled = False
+            Position.Point = '(416,16)'
+            Width = 60.000000000000000000
+            Height = 22.000000000000000000
+            TabOrder = 1
+            ItemIndex = 4
+            OnChange = cbStepLatAzimutChange
+          end
+          object cbLatMinAzimut: TComboBox
+            Enabled = False
+            Position.Point = '(352,16)'
+            Width = 60.000000000000000000
+            Height = 22.000000000000000000
+            TabOrder = 2
+            ItemIndex = 0
+            OnChange = cbStepLatAzimutChange
+          end
+          object cbLongMinAzimut: TComboBox
+            Enabled = False
+            Position.Point = '(352,40)'
+            Width = 60.000000000000000000
+            Height = 22.000000000000000000
+            TabOrder = 3
+            ItemIndex = 9
+            OnChange = cbStepLatAzimutChange
+          end
+          object cbLongMaxAzimut: TComboBox
+            Enabled = False
+            Position.Point = '(416,40)'
+            Width = 60.000000000000000000
+            Height = 22.000000000000000000
+            TabOrder = 4
+            ItemIndex = 13
+            OnChange = cbStepLatAzimutChange
+          end
+          object lblMaxAzim: TLabel
+            Position.Point = '(432,0)'
+            Width = 33.000000000000000000
+            Height = 15.000000000000000000
+            TabOrder = 5
+            Text = 'max'
+          end
+          object lblMinAzim: TLabel
+            Position.Point = '(384,0)'
+            Width = 25.000000000000000000
+            Height = 15.000000000000000000
+            TabOrder = 6
+            Text = 'min'
+          end
+          object lblAzimLat: TLabel
+            Position.Point = '(304,24)'
+            Width = 49.000000000000000000
+            Height = 15.000000000000000000
+            TabOrder = 7
+            Text = #1064#1080#1088#1086#1090#1099
+          end
+          object cbStepLatAzimut: TComboBox
+            Position.Point = '(248,16)'
+            Width = 52.000000000000000000
+            Height = 22.000000000000000000
+            ClipChildren = True
+            TabOrder = 8
+            ItemIndex = 1
+            OnChange = cbStepLatAzimutChange
+          end
+          object lblStepAzimut: TLabel
+            Position.Point = '(176,36)'
+            Width = 81.000000000000000000
+            Height = 15.000000000000000000
+            TabOrder = 9
+            Text = #1064#1072#1075' '#1089#1077#1090#1082#1080' ('#176')'
+          end
+          object chbAllAzimut: TCheckBox
+            Position.Point = '(0,24)'
+            Width = 153.000000000000000000
+            Height = 19.000000000000000000
+            TabOrder = 10
+            IsChecked = True
+            Text = #1087#1086#1082#1072#1079#1072#1090#1100' '#1074#1089#1102' '#1087#1088#1086#1077#1082#1094#1080#1102
+            OnChange = chbAllAzimutChange
+          end
+          object lblAzimLong: TLabel
+            Position.Point = '(304,40)'
+            Width = 57.000000000000000000
+            Height = 15.000000000000000000
+            TabOrder = 11
+            Text = #1044#1086#1083#1075#1086#1090#1099
+          end
+          object cbStepLongAzimut: TComboBox
+            Position.Point = '(248,40)'
+            Width = 52.000000000000000000
+            Height = 22.000000000000000000
+            TabOrder = 12
+            ItemIndex = 1
+            OnChange = cbStepLatAzimutChange
+          end
+        end
+        object imgAzimut: TImage
+          Align = alClient
+          Position.Point = '(0,65)'
+          Width = 481.000000000000000000
+          Height = 224.000000000000000000
+          OnResize = imgAzimutResize
+        end
+      end
+    end
+    object pnlDown: TPanel
+      Align = alClient
+      Position.Point = '(0,294)'
+      Width = 967.000000000000000000
+      Height = 456.000000000000000000
+      TabOrder = 1
+      object pnlGaussDL: TPanel
+        Align = alLeft
+        Width = 481.000000000000000000
+        Height = 456.000000000000000000
+        TabOrder = 0
+        object pnlGaussParams: TPanel
+          Align = alTop
+          Width = 481.000000000000000000
+          Height = 65.000000000000000000
+          TabOrder = 0
+          object lblGaussParams: TLabel
+            Position.Point = '(104,0)'
+            Width = 217.000000000000000000
+            Height = 25.000000000000000000
+            TabOrder = 0
+            Font.Size = 16.000000000000000000
+            Text = #1055#1088#1086#1077#1082#1094#1080#1103' '#1043#1072#1091#1089#1089#1072'-'#1050#1088#1102#1075#1077#1088#1072
+          end
+          object cbScale: TComboBox
+            Position.Point = '(64,36)'
+            Width = 105.000000000000000000
+            Height = 22.000000000000000000
+            TabOrder = 1
+            ItemIndex = 0
+            OnChange = cbScaleChange
+          end
+          object edtNomenclatura: TEdit
+            Position.Point = '(336,32)'
+            Width = 137.000000000000000000
+            Height = 22.000000000000000000
+            TabOrder = 2
+            KeyboardType = vktDefault
+            Password = False
+          end
+          object lblNomenclatura: TLabel
+            Position.Point = '(244,28)'
+            Width = 87.000000000000000000
+            Height = 27.000000000000000000
+            TabOrder = 3
+            TextAlign = taTrailing
+            Text = #1053#1086#1084#1077#1085#1082#1083#1072#1090#1091#1088#1072#13#10#1083#1080#1089#1090#1072' '#1082#1072#1088#1090#1099
+          end
+          object lblScale: TLabel
+            Position.Point = '(8,40)'
+            Width = 57.000000000000000000
+            Height = 15.000000000000000000
+            TabOrder = 4
+            Text = #1052#1072#1089#1096#1090#1072#1073
+          end
+          object lblStepGauss: TLabel
+            Position.Point = '(176,40)'
+            Width = 73.000000000000000000
+            Height = 15.000000000000000000
+            TabOrder = 5
+            Text = #1064#1072#1075' '
+          end
+        end
+        object imgGauss: TImage
+          Align = alClient
+          Position.Point = '(0,65)'
+          Width = 481.000000000000000000
+          Height = 391.000000000000000000
+          OnResize = imgAzimutResize
+        end
+      end
+      object splVertDown: TSplitter
+        Align = alLeft
+        Cursor = crHSplit
+        Position.Point = '(481,0)'
+        Width = 5.000000000000000000
+        Height = 456.000000000000000000
+        TabOrder = 1
+        MinSize = 20.000000000000000000
+      end
+      object pnlCoordModel3D: TPanel
+        Align = alClient
+        Position.Point = '(486,0)'
+        Width = 481.000000000000000000
+        Height = 456.000000000000000000
+        TabOrder = 2
+        object vp3dGeo: TViewport3D
+          Align = alClient
+          Width = 481.000000000000000000
+          Height = 456.000000000000000000
+          Camera = cmrGeo
+          object cmrGeo: TCamera
+            Position.Point = '(0,0,-5)'
+            Width = 1.000000000000000000
+            Height = 1.000000000000000000
+            Depth = 1.000000000000000000
+            Opacity = 1.000000000000000000
+            Quanternion = '(0,0,0,1)'
+          end
+          object lghtGeo: TLight
+            Width = 1.000000000000000000
+            Height = 1.000000000000000000
+            Depth = 1.000000000000000000
+            Opacity = 1.000000000000000000
+            Ambient = xFF202020
+            Diffuse = xFFA0A0A0
+            ConstantAttenuation = 1.000000000000000000
+            LightType = ltDirectional
+            Specular = claWhite
+            SpotCutOff = 180.000000000000000000
+            Quanternion = '(0,0,0,1)'
+          end
+          object mdl3dGeo: TModel3D
+            Width = 1.000000000000000000
+            Height = 1.000000000000000000
+            Depth = 1.000000000000000000
+            Opacity = 1.000000000000000000
+            Quanternion = '(0,0,0,1)'
+            Data = {0000}
+          end
+          object sphrGeo: TSphere
+            Width = 12.000000000000000000
+            Height = 11.000000000000000000
+            Depth = 12.000000000000000000
+            Opacity = 1.000000000000000000
+            Material.Diffuse = claTurquoise
+            Material.Ambient = claCornflowerblue
+            Material.Specular = claDarkgray
+            Quanternion = '(0,0,0,1)'
+          end
+          object grd3dGeo: TGrid3D
+            RotationAngle.Point = '(0,10,0)'
+            Width = 25.000000000000000000
+            Height = 25.000000000000000000
+            Depth = 0.001000000047497451
+            Opacity = 1.000000000000000000
+            Marks = 4.000000000000000000
+            Frequency = 1.000000000000000000
+            LineColor = x50505050
+            Quanternion = '(0,0.0871557369828224,0,0.996194720268249)'
+          end
+        end
+      end
+    end
+    object splHorizontal: TSplitter
+      Align = alTop
+      Cursor = crVSplit
+      Position.Point = '(0,289)'
+      Width = 967.000000000000000000
+      Height = 5.000000000000000000
+      TabOrder = 2
+      MinSize = 20.000000000000000000
+    end
+  end
+end
